@@ -54,6 +54,26 @@
         text-decoration: none;
         color: black;
     }
+    .social-profile{
+        display: flex;
+        justify-content: center;
+
+    }
+    .social-profile span{
+        font-size: 3rem;
+        margin: 1rem;
+        margin-top:0;
+        margin-bottom: 0;
+    }
+
+    @media (max-width:400px) {
+        .social-profile span{
+            font-size: 1.5rem;
+            margin: 0.5rem;
+            margin-top:0;
+            margin-bottom: 0;
+        }
+    }
     </style>
   </head>
 
@@ -211,24 +231,32 @@
     </div>
 
     <footer>
-        <div class="row bg-dark p-5 text-light">
-            <div class="col col-md-4 h-100">
-                <!-- <ul>
-                    <li>Lorem</li>
-                    <li>ipsum</li>
-                    <li>dolor</li>
-                    <li>sit</li>
-                    <li>amet</li>
-                </ul> -->
+        <div class="row bg-dark p-3 text-light">
+            <div class="col col-12 h-100">
+                <div class="social-profile">
+                   <a href="https://www.linkedin.com/in/siddharthzs"><span><i class="fab fa-linkedin text-info"></i></span></a>
+                   <a href="mailto:siddharthchoudhary.mail@gmail.com"><span><i class="fab fa-google text-danger"></i></span></a>
+                   <a href="https://www.github.com/siddharthzs"><span><i class="fab fa-github text-secondary"></i></span></a>
+                   <a href="https://www.twitter.com/Choudhary_sid"><span><i class="fab fa-twitter text-primary"></i></span></a>
+                </div>
+            </div>
+            <!-- <div class="col col-md-4 h-100">
+                 <ul>
+                    <li>Email</li>
+                    <li>Linkedin</li>
+                    <li>Github</li>
+                    <li>Sohagpur, Madhya Pradesh, India, 461771</li>
+                    <li></li>
+                </ul>
 
             </div>
             <div class="col col-md-4 h-100">
-                <!-- <ul>
-                    <li>Contact</li>
-                    <li>Email</li>
-                    <li>Gihub</li>
+                 <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
       
-                </ul> -->
+                </ul>
             </div>
             <div class="col col-md-4 h-100">
                 <ul>
@@ -240,7 +268,7 @@
                  
 
                 </ul>
-            </div>
+            </div> -->
         </div>
     </footer>
 
