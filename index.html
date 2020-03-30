@@ -66,6 +66,75 @@
         margin-bottom: 0;
     }
 
+    .contact-title{
+        display: flex;
+        justify-content: center;
+    }
+
+/* Slider CSS ======================================*/
+.switch {
+  position: absolute;
+  display: inline-block;
+  top: 65px;
+  right:15px;
+  width: 60px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 10px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Slider CSS edn ====================== */
     @media (max-width:400px) {
         .social-profile span{
             font-size: 1.5rem;
@@ -79,14 +148,18 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dar" style="background-color: #005fdd;">
-            <a class="navbar-brand text-white" href="#">SiDdzs</a>
-            <!-- <div class="ml-auto">
+            <a class="navbar-brand text-white" href="#">Sidharthzs</a>
+            <div class="ml-auto">
+                <!-- <i class="fa fa-adjust bg-white" aria-hidden="false"></i> -->
+                <!-- <i class="fa fa-adjust" aria-hidden="true"></i> -->
                 <button class="btn btn-outline-dark text-white border-white">Contact</button>
-            </div> -->
-    
+            </div>
     </nav>
 
-
+    <label class="switch">
+        <input type="checkbox" onclick="theme_change()">
+        <span class="slider round"></span>
+    </label>
 
 
 
@@ -95,7 +168,7 @@
             <div class="col-md-4 my-2 my-md-0">
                 <div class="profile card card-body h-100">
                     <div class="profile-img-box mt-3" style="display: flex;align-items: center;justify-content: center;">
-                        <img class="" src="static/whitehashtag.jpg" alt="pro-img" style="width: 200px; height: 200px;">
+                        <img src="static/whitehashtag.jpg" alt="pro-img" style="width: 200px; height: 200px;" class="rounded-circle">
                     </div>
                     <hr>
                     <header class="profile-content">
@@ -115,10 +188,13 @@
                     <div class="summary-content my-2">
                         <p>
                             A pythoneer, programming enthusiast, part-time bloger and quick learner aspiring to be a great developer.
-                            Skilled in Django, DBMS, Scrapping, Front-end Design. Interested in <strong>Mathematics</strong> and <strong>ML</strong>. <br>
-                            <!-- Non-technical skills are sketching and writing.
-                            I love meeting people and listening to thier story. -->
+                            Technical skills are Django, DBMS, Scrapping, Front-end Design and Back-end Development.<br>
+                             <!-- Non-technical skills are sketching and writing. -->
+                            Loves meeting people, listening to thier stories and sharing knowledge.
                             <br><br>
+                            <strong>Github</strong>: <a href="https://www.github.com/siddharthzs">github.com/siddharthzs</a> <br>
+                            <strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/siddharthzs">linkedin.com/in/siddharthzs</a> <br>
+
                 
                            <!-- <strong>Languages</strong> :English, Hindi<br> -->
                            <!-- <strong>Learning</strong> :Django REST, MongoDB -->
@@ -128,9 +204,12 @@
                     <div class="pro-files mt-auto"">
                         <hr>
                         <button type="button" class="link-button"  data-toggle="modal" data-target=".resume-pdf-lg">Resume</button>
-                        <button type="button" class="link-button"><a href="https://www.linkedin.com/in/siddharthzs">Linkedin</a></button>
+                        <i class="fa fa-cloud-download" aria-hidden="true" onclick="downloadcv()" style="color: #007bff;cursor: pointer;"></i>
+                        <i class="fa fa-share-alt" aria-hidden="true" onclick="copylink()" style="color: #007bff;cursor: pointer;"></i>
+                        
+                        <!-- <button type="button" class="link-button"><a href="https://www.linkedin.com/in/siddharthzs">Linkedin</a></button>
                         <button type="button" class="link-button"><a href="https://github.com/siddharthzs">Github1</a></button>
-                        <button type="button" class="link-button"><a href="https://github.com/siddharthzs654">Github2</a></button>
+                        <button type="button" class="link-button"><a href="https://github.com/siddharthzs654">Github2</a></button> -->
 
                     </div>
               
@@ -188,17 +267,17 @@
                     <hr>
                     <div class="techstack-content">
                         
-                        <p><a href="https://ittai.herokuapp.com"><i class="fas fa-link" ></i><strong>Ittai Forms</strong></a>: Created your own form, collect survey and save responses. (Mimic Google Form)<br>
+                        <p><a href="https://ittai.herokuapp.com"><i class="fas fa-link" ></i><strong>ZuFu Forms</strong></a>: Created your own form, collect survey and save responses. (Mimic Google Form)<br>
                         <strong>tech</strong>: Django, HTML,CSS<br>
                         <strong>code link</strong>: <a href="https://github.com/siddharthzs/virtusa-hacathon">here</a>
 
                         </p>
                         <p><a href="https://youtu.be/k44FSrPv2Bc?t=20"><i class="fas fa-link" ></i><strong>Food Engine</strong></a> : Get News on food and groceries. Get food rating with our ML model. <br>
-                        <strong>tech</strong>: Django(Web), Selenium(Search), Scipy and Scikit Learn(ML)<br>
+                        <strong>tech</strong>: Django(Web), Selenium, Scipy and Scikit Learn<br>
                         <strong>code link</strong>: <a href="https://github.com/yashsony/autumn_hack">here</a>
                         </p>
+                        <p><a href="https://www.github.com/siddharthzs/mars-weather-chrome-extension"><i class="fas fa-link" ></i><strong>Mars Weather Extension</strong></a> : Chrome Extension to fetch weather and datetime detail from InSight NASA API</p>
                         <p><a href="https://siddharthzs.herokuapp.com"><i class="fas fa-link" ></i><strong>SiDdzs</strong></a> : Blog Website</p>
-                        <p><a href=""><i class="fas fa-link" ></i><strong>Hunting Exoplanets</strong></a> : Machine Learning classifier to label a planet as exo-planet and not. </p>
                         
                     </div>
                  </div>
@@ -208,11 +287,13 @@
             <div class="col-md-6 my-2 my-md-0">
                 <div class="learn card card-body h-100">
                     <div class="learn-title">
-                        <h2>Extra</h2>
+                        <h2>Intrests/Hobbies</h2>
                     </div>
                     <hr>
                     <div class="learn-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iure odit deserunt reiciendis voluptate molestias commodi animi facere vel quidem quis aliquam ad explicabo, sequi, perferendis dolorum at nesciunt. Illo.</p>
+                        <p><i class="fas fa-dot-circle text-info" style="font-size: 14px;"></i> Music, Sketching</p>
+                        <p><i class="fas fa-dot-circle text-info" style="font-size: 14px;"></i> Volleyball, Batminton</p>
+                          
                     </div>
                 </div>
     
@@ -230,6 +311,49 @@
                     </div>
                 </div>
     
+            </div>
+        </div>
+        <div class="row my-2 my-md-5">
+            <div class="col-md-12 my-2 my-md-0">
+                <div class="contact card card-body h-100">
+                    <div class="contact-title">
+                        <h2>Leave Me a Note</h2>
+                    </div>
+                    <hr>
+                    <div class="contact-content">
+                        <form>
+                            <div class="form-row align-items-center">
+                              <div class="col-auto">
+                                <label class="sr-only" for="inlineFormInputGroup">FullName</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-user-o fa-fw"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Full Name">
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <label class="sr-only" for="inlineFormInputGroup">EmailId</label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-envelope-o fa-fw"></i></div>
+                                  </div>
+                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email Address">
+                                </div>
+                              </div>
+                              <div class="col-10 mt-2">
+                                <label for="inputMessage">Message :</label>
+                                <div class="input-group mb-2 w-100">
+                                    <textarea  id="inputMessage" class="form-control" aria-describedby="MessageHelpBlock" width="100%"></textarea>
+                                </div>
+                              </div>
+                              <div class="col-10 mt-2">
+                                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                              </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -269,6 +393,10 @@
                     <li>&nbsp;</li>
                     <li>&nbsp;</li>
                     <li>&nbsp;</li>
+                    FullName
+                    EmailId
+                    Message
+                    send
                  
 
                 </ul>
@@ -285,12 +413,15 @@
     <script>
 
         $('.card').hover(function(){
+            $(this).css('border','1px solid rgba(255,255,255,.5)');
             $(this).css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
    
             if($(this)[0] != $('.profile')[0]){
                 $('.profile').css({"box-shadow": "none"});
+                $(this).css('border','none');
             }
         },function(){
+            $(this).css('border','1px solid rgba(255,255,255,.5)');
             $(this).css({"box-shadow": "none"});
             $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
 
@@ -312,6 +443,41 @@
   </div>
 </div>
 
+
+<script>
+var odd = 0;
+    function theme_change(){
+        if(odd == 0){
+            $('body').css('background-color','#191919');
+            $('.card').css('background-color','#111');
+            $('body').css('color','#ffffff');
+            $('.link-button').css('color','white');
+            $('hr').css('background-color','#ccc');
+            $('.card').css('border','1px solid rgba(255,255,255,.5)');
+            $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+
+
+            odd=1;
+
+        }
+        else{
+            odd=0;
+            $('body').css('background-color','#f8f8f8');
+            $('.card').css('background-color','#fff');
+            $('body').css('color','#000');
+            $('.link-button').css('color','#000');
+            $('hr').css('background-color','white');
+            $('.card').css('border','none');
+
+
+
+
+
+        }
+            
+    
+    }
+</script>
 
 </body>
 </html>
