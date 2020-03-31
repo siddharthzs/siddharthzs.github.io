@@ -75,8 +75,8 @@
 .switch {
   position: fixed;
   display: inline-block;
-  bottom: 5px;
-  right:15px;
+  top: 65px;
+  right:20px;
   width: 60px;
   height: 24px;
   z-index: 10;
@@ -143,6 +143,8 @@
             margin-top:0;
             margin-bottom: 0;
         }
+
+
     }
     </style>
   </head>
@@ -153,14 +155,15 @@
             <div class="ml-auto">
                 <!-- <i class="fa fa-adjust bg-white" aria-hidden="false"></i> -->
                 <!-- <i class="fa fa-adjust" aria-hidden="true"></i> -->
-                <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a>
+                <!-- <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a> -->
+                <label class="switch">
+                    <input type="checkbox" onclick="theme_change()">
+                    <span class="slider round"></span>
+                </label>
             </div>
     </nav>
 
-    <label class="switch">
-        <input type="checkbox" onclick="theme_change()">
-        <span class="slider round"></span>
-    </label>
+
 
 
 
@@ -169,7 +172,7 @@
             <div class="col-md-4 my-2 my-md-0">
                 <div class="profile card card-body h-100">
                     <div class="profile-img-box mt-3" style="display: flex;align-items: center;justify-content: center;">
-                        <img src="static/whitehashtag.jpg" alt="pro-img" style="width: 200px; height: 200px;" class="rounded-circle">
+                        <img src="my_photo1.jpg" alt="pro-img" style="width: 200px; height: 200px;" class="rounded-circle">
                     </div>
                     <hr>
                     <header class="profile-content">
