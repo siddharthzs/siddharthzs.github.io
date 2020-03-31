@@ -73,12 +73,13 @@
 
 /* Slider CSS ======================================*/
 .switch {
-  position: absolute;
+  position: fixed;
   display: inline-block;
-  top: 65px;
+  bottom: 5px;
   right:15px;
   width: 60px;
   height: 24px;
+  z-index: 10;
 }
 
 .switch input { 
@@ -152,7 +153,7 @@
             <div class="ml-auto">
                 <!-- <i class="fa fa-adjust bg-white" aria-hidden="false"></i> -->
                 <!-- <i class="fa fa-adjust" aria-hidden="true"></i> -->
-                <button class="btn btn-outline-dark text-white border-white">Contact</button>
+                <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a>
             </div>
     </nav>
 
@@ -204,8 +205,8 @@
                     <div class="pro-files mt-auto"">
                         <hr>
                         <button type="button" class="link-button"  data-toggle="modal" data-target=".resume-pdf-lg">Resume</button>
-                        <i class="fa fa-cloud-download" aria-hidden="true" onclick="downloadcv()" style="color: #007bff;cursor: pointer;"></i>
-                        <i class="fa fa-share-alt" aria-hidden="true" onclick="copylink()" style="color: #007bff;cursor: pointer;"></i>
+                        <i class="fa fa-cloud-download" aria-hidden="true" id="download" style="color: #007bff;cursor: pointer;"></i>
+                        <!-- <i class="fa fa-share-alt" aria-hidden="true" onclick="copylink()" style="color: #007bff;cursor: pointer;"></i> -->
                         
                         <!-- <button type="button" class="link-button"><a href="https://www.linkedin.com/in/siddharthzs">Linkedin</a></button>
                         <button type="button" class="link-button"><a href="https://github.com/siddharthzs">Github1</a></button>
@@ -314,42 +315,46 @@
             </div>
         </div>
         <div class="row my-2 my-md-5">
-            <div class="col-md-12 my-2 my-md-0">
+            <div class="col-md-12 my-2 my-md-0" id="contact-page">
                 <div class="contact card card-body h-100">
                     <div class="contact-title">
                         <h2>Leave Me a Note</h2>
                     </div>
                     <hr>
                     <div class="contact-content">
+                        <p>
+                            <strong>Mail:</strong><a href="mailto:siddharthchoudhary.mail@gmail.com">siddharthchoudhary.mail@gmail.com</a><br>
+                            <strong>M:</strong><span style="color:#007bff">7509907166</span>
+                        </p>
                         <form>
                             <div class="form-row align-items-center">
                               <div class="col-auto">
-                                <label class="sr-only" for="inlineFormInputGroup">FullName</label>
+                                <label class="sr-only" for="myname">FullName</label>
                                 <div class="input-group mb-2">
                                     <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-user-o fa-fw"></i></div>
                                     </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="myname" placeholder="Full Name" required>
                                 </div>
                               </div>
                               <div class="col-auto">
-                                <label class="sr-only" for="inlineFormInputGroup">EmailId</label>
+                                <label class="sr-only" for="myemail">EmailId</label>
                                 <div class="input-group mb-2">
                                   <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-envelope-o fa-fw"></i></div>
                                   </div>
-                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email Address">
+                                  <input type="text" class="form-control" id="myemail" placeholder="Email Address" required>
                                 </div>
                               </div>
                               <div class="col-10 mt-2">
                                 <label for="inputMessage">Message :</label>
                                 <div class="input-group mb-2 w-100">
-                                    <textarea  id="inputMessage" class="form-control" aria-describedby="MessageHelpBlock" width="100%"></textarea>
+                                    <textarea  id="inputMessage" class="form-control" aria-describedby="MessageHelpBlock" width="100%" required></textarea>
                                 </div>
                               </div>
                               <div class="col-10 mt-2">
-                                <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                              </div>
+                                <button type="button" class="btn btn-primary mb-2" id="mymessage">Submit</button>
+                              </div> 
                             </div>
                         </form>
                     </div>
@@ -413,20 +418,48 @@
     <script>
 
         $('.card').hover(function(){
-            $(this).css('border','1px solid rgba(255,255,255,.5)');
-            $(this).css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+            $(this).css('border','1px solid rgba(255,255,255,.9)');
+            $(this).css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.8)"});
    
             if($(this)[0] != $('.profile')[0]){
                 $('.profile').css({"box-shadow": "none"});
-                $(this).css('border','none');
+                
             }
         },function(){
-            $(this).css('border','1px solid rgba(255,255,255,.5)');
+            $(this).css('border','1px solid #ddd');
             $(this).css({"box-shadow": "none"});
-            $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+            $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.8)"});
 
         })
     </script>
+
+
+
+    <script> 
+    // Requiring fs module in which  
+    // readFile function is defined. 
+    function mymessage(){
+
+    // Requiring fs module in which 
+    // writeFile function is defined. 
+    const fs = require('fs') 
+    
+    // Data which will write in a file. 
+    let data = "Learning how to write in a file."
+    
+    // Write data in 'Output.txt' . 
+    fs.writeFile('Output.txt', data, (err) => { 
+        
+        // In case of a error throw err. 
+        if (err) throw err; 
+    }) 
+
+
+
+    }
+
+    </script> 
+    
 
 
 
@@ -445,9 +478,9 @@
 
 
 <script>
-var odd = 0;
+var dark = 0;
     function theme_change(){
-        if(odd == 0){
+        if(dark== 0){
             $('body').css('background-color','#191919');
             $('.card').css('background-color','#111');
             $('body').css('color','#ffffff');
@@ -457,26 +490,76 @@ var odd = 0;
             $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
 
 
-            odd=1;
+            dark=1;
 
         }
         else{
-            odd=0;
+            dark=0;
             $('body').css('background-color','#f8f8f8');
             $('.card').css('background-color','#fff');
             $('body').css('color','#000');
             $('.link-button').css('color','#000');
             $('hr').css('background-color','white');
-            $('.card').css('border','none');
-
-
-
-
+            $('.card').css('border','1px solid #ccc');
 
         }
             
-    
     }
+
+
+  
+    $('#mymessage').click(function(e){
+        e.preventDefault();
+
+        var email = $('#myemail').val();
+        var mess = $('#inputMessage').val();
+        var name = $('#myname').val();
+
+        name = name.trim();
+        mess = mess.trim();
+
+
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if(email = "" || mess == "" || name == "" || !regex.test(email)){
+            alert('Validation Error!');
+            return;
+        }
+
+
+        mess = name + "\n\n" + email + "\n\n" + mess;
+        
+        window.location.href = `https://siddharthzs.herokuapp.com/message/${mess}`;
+        
+    });
+
+
+
+$('#download').click(function(){
+    // var req = new XMLHttpRequest();
+    // req.open("GET", "sid_resume.pdf", true);
+    // req.responseType = "blob";
+
+    // req.onload = function (event) {
+    //     var blob = req.response;
+    //     console.log(blob.size);
+    //     var link=document.createElement('a');
+    //     document.body.appendChild(link);
+    //     link.href=window.URL.createObjectURL(blob);
+    //     link.download="resume_" + new Date() + ".pdf";
+    //     link.click();
+
+        var link = document.createElement('a');
+        link.href = "sid_resume.pdf";
+        link.download = "file_" + new Date() + ".pdf";
+        link.click();
+    // };
+
+//   req.send();
+
+});
+    
+
 </script>
 
 </body>
