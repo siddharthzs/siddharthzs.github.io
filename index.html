@@ -144,6 +144,16 @@
             margin-bottom: 0;
         }
 
+        .switch {
+            position: fixed;
+            display: inline-block;
+            top: 90vh;
+            right:20px;
+            width: 60px;
+            height: 24px;
+            z-index: 10;
+        }
+
 
     }
     </style>
@@ -155,13 +165,14 @@
             <div class="ml-auto">
                 <!-- <i class="fa fa-adjust bg-white" aria-hidden="false"></i> -->
                 <!-- <i class="fa fa-adjust" aria-hidden="true"></i> -->
-                <!-- <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a> -->
-                <label class="switch">
-                    <input type="checkbox" onclick="theme_change()">
-                    <span class="slider round"></span>
-                </label>
+                <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a>
+               
             </div>
     </nav>
+    <label class="switch">
+        <input type="checkbox" onclick="theme_change()">
+        <span class="slider round"></span>
+    </label>
 
 
 
@@ -414,8 +425,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
 
     <script>
 
@@ -435,52 +445,27 @@
         })
     </script>
 
-
-
-    <script> 
-    // Requiring fs module in which  
-    // readFile function is defined. 
-    function mymessage(){
-
-    // Requiring fs module in which 
-    // writeFile function is defined. 
-    const fs = require('fs') 
-    
-    // Data which will write in a file. 
-    let data = "Learning how to write in a file."
-    
-    // Write data in 'Output.txt' . 
-    fs.writeFile('Output.txt', data, (err) => { 
-        
-        // In case of a error throw err. 
-        if (err) throw err; 
-    }) 
-
-
-
-    }
-
-    </script> 
-    
-
-
-
-
 <!-- RESUME PDF MODEL -->
 <!-- Large modal -->
 
-<div class="modal fade resume-pdf-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="height: 100%;">
-  <div class="modal-dialog modal-lg" style="height: 100%;">
-    <div class="modal-content" style="height: 100%;">
-      <!-- <iframe src="/resumepdf/" frameborder="0"></iframe> -->
-      <embed src="sid_resume.pdf" type="application/pdf" width="100%" height="100%">
-    </div>
-  </div>
-</div>
-
 
 <script>
-var dark = 0;
+var dark = 1;
+    $(document).ready(function(){
+
+
+$('body').css('background-color','#191919');
+$('.card').css('background-color','#111');
+$('body').css('color','#ffffff');
+$('.link-button').css('color','white');
+$('hr').css('background-color','#ccc');
+$('.card').css('border','1px solid rgba(255,255,255,.5)');
+$('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+    
+
+    });
+
+
     function theme_change(){
         if(dark== 0){
             $('body').css('background-color','#191919');
@@ -560,9 +545,16 @@ $('#download').click(function(){
 //   req.send();
 
 });
-    
-
 </script>
+
+<div class="modal fade resume-pdf-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="height: 100%;">
+    <div class="modal-dialog modal-lg" style="height: 100%;">
+      <div class="modal-content" style="height: 100%;">
+        <!-- <iframe src="/resumepdf/" frameborder="0"></iframe> -->
+        <embed src="sid_resume.pdf" type="application/pdf" width="100%" height="100%">
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
