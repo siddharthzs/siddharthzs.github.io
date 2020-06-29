@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/081bacb86f.js" crossorigin="anonymous"></script> 
+
+    <title>SiDzs - Portfolio</title>
+
+
+    <style>
+    body{
+        background-color: #f8f8f8;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .profile{
+        box-shadow: 0 0 5px 2px rgba(0,123,255,.5);
+        
+    }
+
+
+    li{
+        text-decoration: none;
+        list-style-type: none;
+     
+        line-height:2.2rem;
+        font-weight: 200;
+        letter-spacing: .1rem;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    .link-button{
+        font-family: inherit;
+        border: 1px solid #aaa;
+        color: black;
+        background: transparent;
+        outline: none;
+        margin: 0 5px 0 5px;
+    }
+    .link-button:hover{
+        background-color: #6c757d;
+        color: white;
+    }
+    .link-button:hover,.link-button:hover a{
+        color: white;
+    }
+    .link-button a{
+        text-decoration: none;
+        color: black;
+    }
+    .social-profile{
+        display: flex;
+        justify-content: center;
+
+    }
+    .social-profile span{
+        font-size: 3rem;
+        margin: 1rem;
+        margin-top:0;
+        margin-bottom: 0;
+    }
+
+    .contact-title{
+        display: flex;
+        justify-content: center;
+    }
+
+/* Slider CSS ======================================*/
+.switch {
+  position: fixed;
+  display: inline-block;
+  top: 65px;
+  right:20px;
+  width: 60px;
+  height: 24px;
+  z-index: 10;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 10px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Slider CSS edn ====================== */
+    @media (max-width:400px) {
+        .social-profile span{
+            font-size: 1.5rem;
+            margin: 0.5rem;
+            margin-top:0;
+            margin-bottom: 0;
+        }
+
+        .switch {
+            position: fixed;
+            display: inline-block;
+            top: 90vh;
+            right:20px;
+            width: 60px;
+            height: 24px;
+            z-index: 10;
+        }
+
+
+    }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dar" style="background-color: #005fdd;">
+            <a class="navbar-brand text-white" href="#">Sidharthzs</a>
+            <div class="ml-auto">
+                <!-- <i class="fa fa-adjust bg-white" aria-hidden="false"></i> -->
+                <!-- <i class="fa fa-adjust" aria-hidden="true"></i> -->
+                <a href="#contact-page"class="btn btn-outline-dark text-white border-white">Contact</a>
+               
+            </div>
+    </nav>
+    <label class="switch">
+        <input type="checkbox" onclick="theme_change()">
+        <span class="slider round"></span>
+    </label>
+
+
+
+
+
+    <div class="container">
+        <div class="row my-2 my-md-5">
+            <div class="col-md-4 my-2 my-md-0">
+                <div class="profile card card-body h-100">
+                    <div class="profile-img-box mt-3" style="display: flex;align-items: center;justify-content: center;">
+                        <img src="my_photo1.jpg" alt="pro-img" style="width: 200px; height: 200px;" class="rounded-circle">
+                    </div>
+                    <hr>
+                    <header class="profile-content">
+                        <h3 class="profile-content-title">Hi I'm Siddharth!</h3>
+                        <p class="profile-content-subtitle">I'm an astrophile, programmer, Indian, undergrade student at Lovely Professional University, and an overall a nice guy.</p>
+                    </header>
+                </div>
+                
+            </div>
+            <div class="col-md-8 my-2 my-md-0">
+                <div class="summary card card-body h-100">
+                    <header class="summary-title my-2">
+                        <h2>Seeking My First Job as a Developer</h2>
+                    </header>
+                    <hr>
+                    <!-- I want to work on optimising machine learning model and then integrate them with web platform. <br> -->
+                    <div class="summary-content my-2">
+                        <p>
+                            A pythoneer, programming enthusiast, part-time bloger and quick learner aspiring to be a great developer.
+                            Technical skills are Django, DBMS, Scrapping, Front-end Design and Back-end Development.<br>
+                             <!-- Non-technical skills are sketching and writing. -->
+                            Loves meeting people, listening to thier stories and sharing knowledge.
+                            <br><br>
+                            <strong>Github</strong>: <a href="https://www.github.com/siddharthzs">github.com/siddharthzs</a> <br>
+                            <strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/siddharthzs">linkedin.com/in/siddharthzs</a> <br>
+
+                
+                           <!-- <strong>Languages</strong> :English, Hindi<br> -->
+                           <!-- <strong>Learning</strong> :Django REST, MongoDB -->
+                        </p>
+                    </div>
+                
+                    <div class="pro-files mt-auto"">
+                        <hr>
+                        <button type="button" class="link-button"  data-toggle="modal" data-target=".resume-pdf-lg">Resume</button>
+                        <i class="fa fa-cloud-download" aria-hidden="true" id="download" style="color: #007bff;cursor: pointer;"></i>
+                        <!-- <i class="fa fa-share-alt" aria-hidden="true" onclick="copylink()" style="color: #007bff;cursor: pointer;"></i> -->
+                        
+                        <!-- <button type="button" class="link-button"><a href="https://www.linkedin.com/in/siddharthzs">Linkedin</a></button>
+                        <button type="button" class="link-button"><a href="https://github.com/siddharthzs">Github1</a></button>
+                        <button type="button" class="link-button"><a href="https://github.com/siddharthzs654">Github2</a></button> -->
+
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+        <div class="row my-2 my-md-5">
+            <div class="col-md-6 my-2 my-md-0">
+                <div class="experience card card-body h-100">
+                   <header class="experience-title">
+                       <h2>Tech Stack</h2>
+                   </header>
+                   <hr>
+                   <div class="languages">
+                       <header><strong>Programming Languages:</strong> </header>
+                       <div style="display: flex; justify-content:flex-start;flex-wrap: wrap;">
+                            <button type="button" class="btn btn-secondary btn-sm px-3 m-2" style="border-radius: 20px!important;">C/C++</button>
+                            <button type="button" class="btn btn-primary btn-sm px-3 m-2" style="border-radius: 20px!important;">Python</button>
+                            <button type="button" class="btn btn-warning btn-sm px-3 m-2" style="border-radius: 20px!important;">JavaScript</button>
+
+                            <button type="button" class="btn btn-danger btn-sm px-3 m-2" style="border-radius: 20px!important;">SQL</button>    
+                            <button type="button" class="btn btn-info btn-sm px-3 m-2" style="border-radius: 20px!important;">MongoDB*</button>
+                       </div>
+                   </div>
+                   <div class="framwork">
+                        <header> <strong>Frameworks:</strong></header>
+                        <div style="display: flex; justify-content: flex-start;flex-wrap: wrap;">
+                            <button type="button" class="btn btn-primary btn-sm px-3 m-2" style="border-radius: 20px!important;">Django</button>
+                            <button type="button" class="btn btn-danger btn-sm px-3 m-2" style="border-radius: 20px!important;">Django REST*</button>
+                            <!-- <button type="button" class="btn btn-secondary btn-sm px-3 m-2" style="border-radius: 20px!important;">React.js*</button> -->
+                        </div>
+                   </div>
+                   <div class="tools">
+                       <header><strong>Tools:</strong></header>
+                       <div style="display: flex; justify-content:flex-start;flex-wrap: wrap;">
+                            <button type="button" class="btn btn-warning btn-sm px-3 m-2" style="border-radius: 20px!important;">Jupyter Notebook</button>
+                            <button type="button" class="btn btn-primary btn-sm px-3 m-2" style="border-radius: 20px!important;">Vscode</button>
+                            <button type="button" class="btn btn-secondary btn-sm px-3 m-2" style="border-radius: 20px!important;">Git</button>
+
+                        
+                        </div>
+
+                   </div>
+                   <div class="footer mt-auto" style="opacity: .8;">
+                       <small>* Begineer</small>
+                   </div>
+                </div>
+    
+            </div>
+            <div class="col-md-6 my-2 my-md-0">
+                <div class="techstack card card-body h-100">
+                    <header class="techstack-title">
+                        <h2>My Projects</h2>
+                    </header>
+                    <hr>
+                    <div class="techstack-content">
+                        
+                        <p><a href="https://ittai.herokuapp.com"><i class="fas fa-link" ></i><strong>ZuFu Forms</strong></a>: Created your own form, collect survey and save responses. (Mimic Google Form)<br>
+                        <strong>tech</strong>: Django, HTML,CSS<br>
+                        <strong>code link</strong>: <a href="https://github.com/siddharthzs/virtusa-hacathon">here</a>
+
+                        </p>
+                        <p><a href="https://youtu.be/k44FSrPv2Bc?t=20"><i class="fas fa-link" ></i><strong>Food Engine</strong></a> : Get News on food and groceries. Get food rating with our ML model. <br>
+                        <strong>tech</strong>: Django(Web), Selenium, Scipy and Scikit Learn<br>
+                        <strong>code link</strong>: <a href="https://github.com/yashsony/autumn_hack">here</a>
+                        </p>
+                        <p><a href="https://www.github.com/siddharthzs/mars-weather-chrome-extension"><i class="fas fa-link" ></i><strong>Mars Weather Extension</strong></a> : Chrome Extension to fetch weather and datetime detail from InSight NASA API</p>
+                        <p><a href="https://siddharthzs.herokuapp.com"><i class="fas fa-link" ></i><strong>SiDdzs</strong></a> : Blog Website</p>
+                        
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="row my-2 my-md-5">
+            <div class="col-md-6 my-2 my-md-0">
+                <div class="learn card card-body h-100">
+                    <div class="learn-title">
+                        <h2>Intrests/Hobbies</h2>
+                    </div>
+                    <hr>
+                    <div class="learn-content">
+                        <p><i class="fas fa-dot-circle text-info" style="font-size: 14px;"></i> Music, Sketching</p>
+                        <p><i class="fas fa-dot-circle text-info" style="font-size: 14px;"></i> Volleyball, Batminton</p>
+                          
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col-md-6 my-2 my-md-0">
+                <div class="goals card card-body h-100">
+                    <div class="goal-title">
+                        <h2>My Goals</h2>
+                    </div>
+                    <hr>
+                    <div class="goal-content">
+                            <p><i class="fas fa-dot-circle text-success" style="font-size: 14px;"></i> Stay Enthusiast, Listner, and Learner.</p>
+                            <p><i class="fas fa-dot-circle text-success" style="font-size: 14px;"></i> Becoming a great developer.</p>
+                            <!-- <p><i class="fas fa-dot-circle text-success" style="font-size: 14px;"></i> To lead a organization, becoming Chief Technology Officer(CTO).</p>               -->
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="row my-2 my-md-5">
+            <div class="col-md-12 my-2 my-md-0" id="contact-page">
+                <div class="contact card card-body h-100">
+                    <div class="contact-title">
+                        <h2>Leave Me a Note</h2>
+                    </div>
+                    <hr>
+                    <div class="contact-content">
+                        <p>
+                            <strong>Mail:</strong><a href="mailto:siddharthchoudhary.mail@gmail.com">siddharthchoudhary.mail@gmail.com</a><br>
+                        </p>
+                        <form>
+                            <div class="form-row align-items-center">
+                              <div class="col-auto">
+                                <label class="sr-only" for="myname">FullName</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-user-o fa-fw"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="myname" placeholder="Full Name" required>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <label class="sr-only" for="myemail">EmailId</label>
+                                <div class="input-group mb-2">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-envelope-o fa-fw"></i></div>
+                                  </div>
+                                  <input type="text" class="form-control" id="myemail" placeholder="Email Address" required>
+                                </div>
+                              </div>
+                              <div class="col-10 mt-2">
+                                <label for="inputMessage">Message :</label>
+                                <div class="input-group mb-2 w-100">
+                                    <textarea  id="inputMessage" class="form-control" aria-describedby="MessageHelpBlock" width="100%" required></textarea>
+                                </div>
+                              </div>
+                              <div class="col-10 mt-2">
+                                <button type="button" class="btn btn-primary mb-2" id="mymessage">Submit</button>
+                              </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row bg-dark p-3 text-light">
+            <div class="col col-12 h-100">
+                <div class="social-profile">
+                   <a href="https://www.linkedin.com/in/siddharthzs"><span><i class="fab fa-linkedin text-info"></i></span></a>
+                   <a href="mailto:siddharthchoudhary.mail@gmail.com"><span><i class="fab fa-google text-danger"></i></span></a>
+                   <a href="https://www.github.com/siddharthzs"><span><i class="fab fa-github text-secondary"></i></span></a>
+                   <a href="https://www.twitter.com/Choudhary_sid"><span><i class="fab fa-twitter text-primary"></i></span></a>
+                </div>
+            </div>
+            <!-- <div class="col col-md-4 h-100">
+                 <ul>
+                    <li>Email</li>
+                    <li>Linkedin</li>
+                    <li>Github</li>
+                    <li>Sohagpur, Madhya Pradesh, India, 461771</li>
+                    <li></li>
+                </ul>
+
+            </div>
+            <div class="col col-md-4 h-100">
+                 <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+      
+                </ul>
+            </div>
+            <div class="col col-md-4 h-100">
+                <ul>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    FullName
+                    EmailId
+                    Message
+                    send
+                 
+
+                </ul>
+            </div> -->
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+
+    <script>
+
+        $('.card').hover(function(){
+            $(this).css('border','1px solid rgba(255,255,255,.9)');
+            $(this).css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.8)"});
+   
+            if($(this)[0] != $('.profile')[0]){
+                $('.profile').css({"box-shadow": "none"});
+                
+            }
+        },function(){
+            $(this).css('border','1px solid #ddd');
+            $(this).css({"box-shadow": "none"});
+            $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.8)"});
+
+        })
+    </script>
+
+<!-- RESUME PDF MODEL -->
+<!-- Large modal -->
+
+
+<script>
+var dark = 1;
+    $(document).ready(function(){
+
+
+$('body').css('background-color','#191919');
+$('.card').css('background-color','#111');
+$('body').css('color','#ffffff');
+$('.link-button').css('color','white');
+$('hr').css('background-color','#ccc');
+$('.card').css('border','1px solid rgba(255,255,255,.5)');
+$('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+    
+
+    });
+
+
+    function theme_change(){
+        if(dark== 0){
+            $('body').css('background-color','#191919');
+            $('.card').css('background-color','#111');
+            $('body').css('color','#ffffff');
+            $('.link-button').css('color','white');
+            $('hr').css('background-color','#ccc');
+            $('.card').css('border','1px solid rgba(255,255,255,.5)');
+            $('.profile').css({"box-shadow": "0 0 5px 2px rgba(0,123,255,.5)"});
+
+
+            dark=1;
+
+        }
+        else{
+            dark=0;
+            $('body').css('background-color','#f8f8f8');
+            $('.card').css('background-color','#fff');
+            $('body').css('color','#000');
+            $('.link-button').css('color','#000');
+            $('hr').css('background-color','white');
+            $('.card').css('border','1px solid #ccc');
+
+        }
+            
+    }
+
+
+  
+    $('#mymessage').click(function(e){
+        e.preventDefault();
+
+        var email = $('#myemail').val();
+        var mess = $('#inputMessage').val();
+        var name = $('#myname').val();
+
+        name = name.trim();
+        mess = mess.trim();
+
+
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if(email = "" || mess == "" || name == "" || !regex.test(email)){
+            alert('Validation Error!');
+            return;
+        }
+
+
+        mess = name + "\n\n" + email + "\n\n" + mess;
+        
+        window.location.href = `https://siddharthzs.herokuapp.com/message/${mess}`;
+        
+    });
+
+
+
+$('#download').click(function(){
+    // var req = new XMLHttpRequest();
+    // req.open("GET", "sid_resume.pdf", true);
+    // req.responseType = "blob";
+
+    // req.onload = function (event) {
+    //     var blob = req.response;
+    //     console.log(blob.size);
+    //     var link=document.createElement('a');
+    //     document.body.appendChild(link);
+    //     link.href=window.URL.createObjectURL(blob);
+    //     link.download="resume_" + new Date() + ".pdf";
+    //     link.click();
+
+        var link = document.createElement('a');
+        link.href = "sid_resume.pdf";
+        link.download = "file_" + new Date() + ".pdf";
+        link.click();
+    // };
+
+//   req.send();
+
+});
+</script>
+
+<div class="modal fade resume-pdf-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="height: 100%;">
+    <div class="modal-dialog modal-lg" style="height: 100%;">
+      <div class="modal-content" style="height: 100%;">
+        <!-- <iframe src="/resumepdf/" frameborder="0"></iframe> -->
+        <embed src="sid_resume.pdf" type="application/pdf" width="100%" height="100%">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
