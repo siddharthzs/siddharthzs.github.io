@@ -16,7 +16,8 @@
         span {
             color: #555555;
         }
-        body{
+
+        body {
             overflow: hidden;
         }
 
@@ -35,7 +36,7 @@
 
         .top-section h1 {
             text-align: center;
-            font-size: 3em;
+            font-size: 4vw;
             font-weight: lighter;
         }
 
@@ -55,14 +56,14 @@
         .top-section ul li a {
             color: #146ee6;
             display: block;
-            font-size: 1.5em;
-            padding: 16px 16px 10px 16px;
+            font-size: 1vw;
+            padding: 10px 1vw 10px 1vw;
             text-decoration: none;
         }
 
         svg {
-            height: 32px;
-            width: 32px;
+            height: 3vw;
+            width: 3vw;
         }
 
         svg>* {
@@ -79,7 +80,7 @@
         }
 
         #email {
-            font-size: 32px;
+            font-size: 3vw;
         }
 
         element {
@@ -95,6 +96,32 @@
 
         #email svg>path {
             stroke: #ffffff;
+        }
+
+
+        @media screen and (max-device-width: 1150px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            a{
+                font-size: 1em;
+            }
+            svg {
+                font-size:16px;
+            }
+        }
+        @media screen and (max-device-width: 500px) {
+            h1 {
+                font-size: 2vw;
+            }
+
+            a{
+                font-size: 1em;
+            }
+            svg {
+                font-size:16px;
+            }
         }
     </style>
 </head>
@@ -160,22 +187,22 @@
                     </li>
                 </ul>
                 <style>
-                    p{
-                        font-size: 18px;
+                    p {
+                        font-size: 1.7vw;
                         font-family: 'Roboto Mono', monospace;
                         line-height: 1.80857;
                         width: 70%;
-                        margin-top: 5rem;
+                        margin-top: 3em;
                         text-align: center;
-            
+
                     }
-                    
                 </style>
-                <p>I'm a programmer, astrophile, tech enthusiast, undergrad student at Lovely Professional University, Indian and an overall a nice guy. </p>
+                <p>I'm a programmer, astrophile, tech enthusiast, undergrad student at Lovely Professional University,
+                    Indian and an overall a nice guy. </p>
             </div>
         </div>
         <style>
-            .info-footer{
+            .info-footer {
                 position: absolute;
                 bottom: 5px;
                 padding: 4px 16px;
